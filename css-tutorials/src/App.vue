@@ -1,29 +1,33 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <Header @toggle-drawer="$refs.drawer.drawer = !$refs.drawer.drawer"/>
+    <Sidebar ref="drawer" :routes="routes"/>
+      <!-- <v-btn icon class="mt-3 fixed-position" @toggle-drawer="$refs.drawer.drawer = !$refs.drawer.drawer">
+      <v-icon>menu</v-icon>
+    </v-btn> -->
+    
     <router-view/>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+<style lang="sass">
+  @import "@/styles/app.sass"
 </style>
+
+<script>
+// @ is an alias to /src
+import Header from "@/components/Header.vue";
+import Sidebar from "@/components/Sidebar.vue";
+import Routes from "@/router.js";
+export default {
+  components: {
+    Sidebar,
+    Header
+  },
+  data() {
+    return {
+      routes: Routes.options.routes
+    };
+  }
+};
+</script>

@@ -1,7 +1,7 @@
 <template>
-  <div id="home">
-    <Page title="Home">
-      <h1>This is the home page</h1>
+  <div id="layouts">
+    <Page title="Layout">
+      <h1>This is the layout page</h1>
       
     </Page>
   </div>

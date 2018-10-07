@@ -1,7 +1,7 @@
 <template>
-  <div id="home">
-    <Page title="Home">
-      <h1>This is the home page</h1>
+  <div id="behind-the-scenes">
+    <Page title="Behind the Scenes">
+      <h1>This is the behind the scenes page</h1>
       
     </Page>
   </div>

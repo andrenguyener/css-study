@@ -1,8 +1,8 @@
 <template>
-  <div id="home">
-    <Page title="Home">
-      <h1>This is the home page</h1>
-      
+  <div id="page-not-found">
+    <Page title="Page Not Found">
+      <h1>This is the page not found page</h1>
+    
     </Page>
   </div>
 </template>
