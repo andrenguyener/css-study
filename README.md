@@ -1,6 +1,8 @@
 # css-study
 
-## Project setup
+## Follow me on my journey of studying CSS
+
+<!-- ## Project setup
 ```
 npm install
 ```
@@ -23,4 +25,4 @@ npm run test
 ### Lints and fixes files
 ```
 npm run lint
-```
+``` -->
