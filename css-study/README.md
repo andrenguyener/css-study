@@ -1,4 +1,4 @@
-# css-tutorials
+# css-study
 
 ## Project setup
 ```
