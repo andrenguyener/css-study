@@ -3,6 +3,7 @@ import Router from "vue-router";
 import Home from "./views/Home.vue";
 import PageNotFound from "./views/PageNotFound.vue";
 import BehindTheScenes from "./views/BehindTheScenes.vue";
+import Parsing from "./views/Parsing.vue";
 import Layout from "./views/Layout.vue";
 
 Vue.use(Router);
@@ -24,6 +25,12 @@ export default new Router({
       show: true,
       component: BehindTheScenes
       // component: () => import("./views/BehindTheScenes.vue")
+    },
+    {
+      path: "/parsing",
+      name: "Parsing CSS",
+      show: true,
+      component: Parsing
     },
     {
       path: "/cssgrids-flexbox",
