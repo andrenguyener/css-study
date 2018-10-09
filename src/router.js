@@ -10,6 +10,7 @@ Vue.use(Router);
 // TODO: Fix lazy loading to render on production
 
 export default new Router({
+  mode: "history",
   routes: [
     {
       path: "/",
