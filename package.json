@@ -10,6 +10,7 @@
     "deploy": "node ./node_modules/vue-gh-pages/index.js -b gh-pages"
   },
   "dependencies": {
+    "normalize.css": "^8.0.0",
     "npm": "^6.4.1",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",

@@ -1,7 +1,7 @@
 <template>
 	<div id="behind-the-scenes">
 		<Page title="How CSS Works Behind the Scene">
-			<h3>What happens to CSS when we load up a webpage?</h3>
+			<h2>What happens to CSS when we load up a webpage?</h2>
 			<p>Now a bunch of stuff happen behind the scene of the internet until the browser can start loading up the web page we requested. Things like HTTP requests, figuring right domain name servers and what not. I won’t be focusing on all that though but instead what happens in the browser on a computer when the user opens up a page.</p>
 			<br>
 			<p>So, a good starting point is when the browser starts to load the initial HTML file.</p>
@@ -25,12 +25,8 @@
 			<img class="page-image" src="@/assets/behind-the-scenes-diagram/step9.png" alt="">
 			<p>Now to actually render the page, the browser uses something called the visual formatting model. This algorithm calculates and uses a bunch of stuff that you already know about like box models, floats, positioning, etc. I’ll talk about a little how this visual formatting model works later.</p>
 			<img class="page-image" src="@/assets/behind-the-scenes-diagram/step10.png" alt="">
-			<br>
-			<br>
 			<p>So finally, after the visual formatting model has done its work the website is finally rendered or painted to the screen and the process is finished.</p>
 			<img class="page-image" src="@/assets/behind-the-scenes-diagram/step11.png" alt="">
-			<br>
-			<br>
 			<p>Great! Now you know what happens behind the scenes of a page load in a browser.</p>
 		</Page>
 	</div>

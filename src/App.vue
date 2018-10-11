@@ -1,13 +1,12 @@
 <template>
-  <div id="app">
-    <Header @toggle-drawer="$refs.drawer.drawer = !$refs.drawer.drawer"/>
-    <Sidebar ref="drawer" :routes="routes"/>
-      <!-- <v-btn icon class="mt-3 fixed-position" @toggle-drawer="$refs.drawer.drawer = !$refs.drawer.drawer">
+	<div id="app">
+		<Header @toggle-drawer="$refs.drawer.drawer = !$refs.drawer.drawer"/>
+		<Sidebar ref="drawer" :routes="routes"/>
+		<!-- <v-btn icon class="mt-3 fixed-position" @toggle-drawer="$refs.drawer.drawer = !$refs.drawer.drawer">
       <v-icon>menu</v-icon>
-    </v-btn> -->
-    
-    <router-view/>
-  </div>
+		</v-btn>-->
+		<router-view/>
+	</div>
 </template>
 
 <style lang="sass">

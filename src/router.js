@@ -2,9 +2,6 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import PageNotFound from "./views/PageNotFound.vue";
-import BehindTheScenes from "./views/BehindTheScenes.vue";
-import Parsing from "./views/Parsing.vue";
-import Layout from "./views/Layout.vue";
 
 Vue.use(Router);
 
@@ -23,21 +20,21 @@ export default new Router({
       path: "/behind-the-scenes",
       name: "Behind the Scenes",
       show: true,
-      component: BehindTheScenes
-      // component: () => import("./views/BehindTheScenes.vue")
+      // component: BehindTheScenes
+      component: () => import("./views/BehindTheScenes.vue")
     },
     {
-      path: "/parsing",
-      name: "Parsing CSS",
+      path: "/cascade-specificity",
+      name: "The Cascade and Specificity",
       show: true,
-      component: Parsing
+      component: () => import("./views/CascadeAndSpecificity.vue")
     },
     {
       path: "/cssgrids-flexbox",
       name: "CSS Grids vs Flexbox",
       show: true,
-      component: Layout
-      // component: () => import("./views/Layout.vue")
+      // component: Layout
+      component: () => import("./views/Layout.vue")
     },
     {
       path: "/*",
