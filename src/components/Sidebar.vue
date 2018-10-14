@@ -7,14 +7,10 @@
 				</router-link>
 			</v-layout>
 		</v-container>
-		<v-divider></v-divider>
-		<v-list dense class="pt-0">
-			<v-list-tile v-for="route in activeRoutes" :key="route.name">
-				<v-list-tile-content>
-					<v-list-tile-title></v-list-tile-title>
-					<router-link :to="route.path" exact>{{ route.name }}</router-link>
-				</v-list-tile-content>
-			</v-list-tile>
+		<v-list dense>
+			<template v-for="route in activeRoutes">
+				<SidebarList v-bind:route="route" :key="route.name"></SidebarList>
+			</template>
 		</v-list>
 	</v-navigation-drawer>
 </template>
@@ -24,20 +20,39 @@
 </style>
 
 <script>
+import SidebarList from "@/components/SidebarList.vue";
 export default {
   props: {
     routes: Array
+  },
+  components: {
+    SidebarList
   },
   data() {
     return {
       drawer: true
     };
   },
+  methods: {
+    traverseRoutes: function(route, copy) {
+      if (!route.show) {
+        copy.splice(copy.indexOf(route), 1);
+        return;
+      }
+      if (route.children) {
+        route.children.forEach(r => {
+          this.recursionRoutes(r);
+        });
+      }
+    }
+  },
   computed: {
     activeRoutes: function() {
-      return this.routes.filter(route => {
-        return route.show;
+      let copy = this.routes.slice();
+      copy.forEach(route => {
+        this.traverseRoutes(route, copy);
       });
+      return copy;
     }
   }
 };

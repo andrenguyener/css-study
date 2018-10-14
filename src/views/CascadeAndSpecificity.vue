@@ -40,7 +40,7 @@
       <p>But we should better look at an example, here right?</p>
       <img class="page-image" src="@/assets/cascade-specificity/button-ex1.png" alt="">
       <p>
-        But we should better look at an example, here right? Here we have two rules in which both apply to the button class and we have two conflicting declarations about the background color.
+        Here we have two rules in which both apply to the button class and we have two conflicting declarations about the background color.
         These are both author declarations but if you look closely in the first rule, the declaration with the red background color contains the important keyword and therefore this declaration is more important as we can see from the table.
       </p>
       <img class="page-image" src="@/assets/cascade-specificity/button-ex2.png" alt="">
@@ -106,37 +106,47 @@
       </p>
       <h2>Cascade and Specificity: Important Takeaways</h2>
       <p>Let me give you a quick summary and overview of the most important things we just learned, this is essentially what you should really retain. First off, we learned that CSS declarations marked with !important keyword have the highest priority when multiple declarations are in conflict.</p>
-      <h3>CSS declarations marked with !important have the highest priority</h3>
+      <h3 class="list-item">CSS declarations marked with !important have the highest priority</h3>
       <p>
         But, you should only ever use important as a last resource. If something doesn't work the way you think it should then look at your selector specificities and figure out what's going on. That's always better than just adding !important which may solve the problem in an easier way but will cause you problems in the long run.
         Remember to think about maintainable code; well, thinking about specificities and using !important only as the last resource is one of the things that will make your code more maintainable for the future.
       </p>
-      <h3>But, only use !important as a last resource. It's better to use correct specificities -- more maintanable code</h3>
+      <h3
+        class="list-item"
+      >But, only use !important as a last resource. It's better to use correct specificities -- more maintanable code</h3>
       <p>
         The next thing to remember is that inline styles that you
         write in your HTML will always have priority over styles you write in an external stylesheet.
         But, since using inline styles isn't such a good practice anyway this one isn't all too important.
       </p>
-      <h3>Inline styles will always have priority over styles in external stylesheets</h3>
+      <h3
+        class="list-item"
+      >Inline styles will always have priority over styles in external stylesheets</h3>
       <p>Next a selector that contains even only one ID is more specific than one with a thousand classes. So, if you want to be really specific, use an ID.</p>
-      <h3>A selector that contains 1 ID is more specific than one with 1000 classes</h3>
+      <h3
+        class="list-item"
+      >A selector that contains 1 ID is more specific than one with 1000 classes</h3>
       <p>In the same way, a selector with one class is more specific than one with a thousand elements of course.</p>
-      <h3>A selector that contains 1 class is more specific than one with 1000 elements</h3>
+      <h3
+        class="list-item"
+      >A selector that contains 1 class is more specific than one with 1000 elements</h3>
       <p>
         One thing that is really important to note is that the universal selector * has no specificity value and so at 0, 0, 0, 0.
         Which means that all selectors have a precedence over it.
       </p>
-      <h3>The universal selector has * has no specificity value (0, 0, 0, 0)</h3>
+      <h3 class="list-item">The universal selector has * has no specificity value (0, 0, 0, 0)</h3>
       <p>
         Another thing that you should note is that it's best to always rely more on specificity than on
         the order of selectors. This way if you someday rearrange all your CSS code you won't have any surprises which could mess up your entire code. This again makes your code a lot easier to maintain which is hugely important.
       </p>
-      <h3>Rely more on specificity than on the order of the selectors</h3>
+      <h3 class="list-item">Rely more on specificity than on the order of the selectors</h3>
       <p>
         Now there's actually one case where you do need to
         worry about the order of selectors. That's when you're using external third-party style sheets. Imagine for instance that you include something like a reset style sheet which defines a couple of styles for common elements. In this case of course you want your stylesheet to be able to overwrite the third-party styles, so your own style sheet should be the last one to be included in the HTML. In this case the order is actually hugely important.
       </p>
-      <h3>But, rely on order when using 3rd party stylesheets - always put your author stylesheets last</h3>
+      <h3
+        class="list-item"
+      >But, rely on order when using 3rd party stylesheets - always put your author stylesheets last</h3>
       <p>All right that's actually all there is to know about the Cascade and specificity in CSS so if you ever wondered what the cascading word in cascading style sheets actually means now you know it. Great right and the best part is that understanding all of this will now allow you to write better cleaner and more maintainable CSS code.</p>
     </Page>
   </div>
