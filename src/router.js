@@ -6,31 +6,29 @@ import PageLayout from "./views/PageLayout.vue";
 
 Vue.use(Router);
 
-// TODO: Fix lazy loading to render on production
-
 export default new Router({
   mode: "history",
   routes: [
     {
       path: "/",
-      name: "Home",
+      name: "Introduction",
       show: false,
       component: Home
     },
     {
       name: "How CSS Works",
-      path: "/",
+      path: "",
       show: true,
       component: PageLayout,
       children: [
         {
-          path: "behind-the-scenes",
+          path: "/behind-the-scenes",
           name: "Behind the Scenes",
           show: true,
           component: () => import("./views/BehindTheScenes.vue")
         },
         {
-          path: "cascade-specificity",
+          path: "/cascade-specificity",
           name: "The Cascade and Specificity",
           show: true,
           component: () => import("./views/CascadeAndSpecificity.vue")
@@ -40,8 +38,14 @@ export default new Router({
     {
       path: "/cssgrids-flexbox",
       name: "CSS Grids vs Flexbox",
-      show: true,
+      show: false,
       component: () => import("./views/Layout.vue")
+    },
+    {
+      path: "/ghost",
+      name: "Ghost",
+      show: false,
+      component: () => import("./views/GhostCSS.vue")
     },
     {
       path: "/*",

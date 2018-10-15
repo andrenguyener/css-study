@@ -1,15 +1,11 @@
 <template>
-  <div id="home">
-    <Page title="Home">
-      <h1>This is the home page</h1>
-      
-    </Page>
+  <div id="introduction">
+    <h1>Follow me on my journey to studying CSS!</h1>
   </div>
 </template>
 
 
 <script>
-// @ is an alias to /src
 import Page from "@/components/Page.vue";
 export default {
   components: {

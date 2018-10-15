@@ -2,6 +2,7 @@
   <div class="page">
     <h1 class="page-title">{{ title }}</h1>
     <slot></slot>
+    <Pagination :routes="routes"></Pagination>
   </div>
 </template>
 
@@ -10,9 +11,14 @@
 </style>
 
 <script>
+import Pagination from "@/components/Pagination.vue";
 export default {
   props: {
-    title: String
+    title: String,
+    routes: Array
+  },
+  components: {
+    Pagination
   }
 };
 </script>
