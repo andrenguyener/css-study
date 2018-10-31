@@ -1,8 +1,12 @@
 <template>
   <div class="page">
-    <h1 class="page-title">{{ title }}</h1>
-    <slot></slot>
-    <Pagination :routes="routes"></Pagination>
+    <div class="page-body">
+      <div class="page-content">
+        <h1 class="page-title">{{ title }}</h1>
+        <slot></slot>
+      </div>
+      <Pagination :routes="routes"></Pagination>
+    </div>
   </div>
 </template>
 

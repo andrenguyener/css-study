@@ -9,6 +9,7 @@
     <Page :routes="routes" :title="this.$route.name">
       <router-view/>
     </Page>
+    <!-- <Pagination :routes="routes"></Pagination> -->
   </div>
 </template>
 
@@ -22,11 +23,13 @@ import Header from "@/components/Header.vue";
 import Sidebar from "@/components/Sidebar.vue";
 import Page from "@/components/Page.vue";
 import Routes from "@/router.js";
+import Pagination from "@/components/Pagination.vue";
 export default {
   components: {
     Sidebar,
     Header,
-    Page
+    Page,
+    Pagination
   },
   data() {
     return {

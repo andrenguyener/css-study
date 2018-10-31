@@ -8,6 +8,9 @@ Vue.use(Router);
 
 export default new Router({
   mode: "history",
+  scrollBehavior() {
+    return { x: 0, y: 0 };
+  },
   routes: [
     {
       path: "/",
@@ -32,6 +35,24 @@ export default new Router({
           name: "The Cascade and Specificity",
           show: true,
           component: () => import("./views/CascadeAndSpecificity.vue")
+        },
+        {
+          path: "/value-processing",
+          name: "Value Processing Part 1",
+          show: true,
+          component: () => import("./views/ValueProcessing.vue")
+        },
+        {
+          path: "/value-processing2",
+          name: "Value Processing Part 2",
+          show: true,
+          component: () => import("./views/ValueProcessing2.vue")
+        },
+        {
+          path: "/inheritance",
+          name: "Inheritance",
+          show: true,
+          component: () => import("./views/Inheritance.vue")
         }
       ]
     },
@@ -44,7 +65,7 @@ export default new Router({
     {
       path: "/ghost",
       name: "Ghost",
-      show: false,
+      show: true,
       component: () => import("./views/GhostCSS.vue")
     },
     {

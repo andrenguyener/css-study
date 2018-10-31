@@ -6,7 +6,7 @@
 </template>
 
 <style scoped lang="sass">
-  @import "@/styles/blankPage.sass"
+  // @import "@/styles/blankPage.sass"
 </style>
 
 <script>

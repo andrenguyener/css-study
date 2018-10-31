@@ -1,25 +1,23 @@
 <template>
-    <div v-show="getRouteIndex() >= 0 ? true : false" id="pagination">
-        <div id="prev" @click="prev">
-            <v-icon
-                id="prev-button"
-                :disabled="getRouteIndex() === 0 ? true : false"
-            >mdi-chevron-left</v-icon>
-            <p>{{ getRouteIndex() > 0 ? flattenRoutes[getRouteIndex() - 1].name : ""}}</p>
-        </div>
-        <div id="next" @click="next">
-            <p>{{ getRouteIndex() === flattenRoutes.length - 1 ? "" : flattenRoutes[getRouteIndex() + 1].name }}</p>
-            <v-icon
-                id="next-button"
-                :disabled="getRouteIndex() === flattenRoutes.length - 1 ? true : false"
-            >mdi-chevron-right</v-icon>
-        </div>
+  <div v-show="getRouteIndex() >= 0 ? true : false" id="pagination">
+    <div id="prev" @click="prev">
+      <v-icon id="prev-button" :disabled="getRouteIndex() === 0 ? true : false">mdi-chevron-left</v-icon>
+      <p>{{ getRouteIndex() > 0 ? flattenRoutes[getRouteIndex() - 1].name : ""}}</p>
     </div>
+    <div id="next" @click="next">
+      <p>{{ getRouteIndex() === flattenRoutes.length - 1 ? "" : flattenRoutes[getRouteIndex() + 1].name }}</p>
+      <v-icon
+        id="next-button"
+        :disabled="getRouteIndex() === flattenRoutes.length - 1 ? true : false"
+      >mdi-chevron-right</v-icon>
+    </div>
+  </div>
 </template>
 
 <style scoped lang="sass">
     #pagination
         display: flex
+        flex-shrink: 0
         // justify-content: center
         justify-content: space-between
         margin-top: 3em
