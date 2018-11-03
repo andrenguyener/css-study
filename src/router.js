@@ -25,6 +25,12 @@ export default new Router({
       component: PageLayout,
       children: [
         {
+          path: "/good-html-css",
+          name: "Three Pillars of Good HTML/CSS",
+          show: true,
+          component: () => import("./views/ThreePillarsGoodHTMLCSS.vue")
+        },
+        {
           path: "/behind-the-scenes",
           name: "Behind the Scenes",
           show: true,
@@ -53,6 +59,18 @@ export default new Router({
           name: "Inheritance",
           show: true,
           component: () => import("./views/Inheritance.vue")
+        },
+        {
+          path: "/visual-formatting-model",
+          name: "Visual Formatting Model",
+          show: true,
+          component: () => import("./views/VisualFormattingModel.vue")
+        },
+        {
+          path: "/css-architecture",
+          name: "CSS Architecture Components and BEM",
+          show: true,
+          component: () => import("./views/CSSArchitecture.vue")
         }
       ]
     },
